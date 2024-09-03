@@ -1,18 +1,32 @@
 import {useState} from "react"
-import {v4 as uuidv4 } from  "uuid"
 
 
 export default function Todolist() {
     let [Todo, setTodo] = useState(["Sample todo"]);
-    let AddToDo = (event) => {
-        setTodo(event.target.value);
+    let [newTodo, setnewTodo] = useState("");
+    let AddToDo = () => {
+        event.preventDefault();
+        if (newTodo.trim() !== ""){
+            setTodo([...Todo, newTodo]);
+            setnewTodo("");
+        }
     }
     return(
         <>
         <h3>Add a Todo</h3> <br /><br /><br /><br /><hr/>
-        <input type="text" placeholder='Add a todo' />
+        <form onSubmit={AddToDo}>
+        <input  type="text"
+                id="input"
+                placeholder="Add a todo" 
+                value={newTodo} 
+                onChange={(e) => setnewTodo(e.target.value)} />
         <button type="submit" onClick={AddToDo}>Add</button>
-        <li>{Todo}</li>
+        </form>
+        <ul>
+        {Todo.map((items,index) => (
+            <li key={index}>{items}</li>
+        ))}
+        </ul>
         </>
     )
 
