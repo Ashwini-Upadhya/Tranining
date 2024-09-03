@@ -1,0 +1,63 @@
+.OuterDiv{
+    margin-top: 25px;
+    margin-left: 10px;
+    padding: 0px;
+    display: inline-block;
+    background-color: #e6c975;
+    width: 150px;
+    height: 250px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 15px;
+    border: 2px solid #e6c975;
+    transition:0.2s;
+}
+.OuterDiv:hover{
+    background-color: #f8da81;
+    box-shadow:2px 2px black;
+    transform: scale(1.02);
+}
+.Product {
+    display:block;
+    padding-top: 0px;
+    margin-top: 0px;
+    width: 150px;
+    height: 200px;
+    border-radius: 15px;
+    background-color: #51ddfc;
+   
+}
+.iconify iconify--logos{
+    transform:rotate(0deg);
+}
+header{
+    font: size 10% ;
+    font-weight: 600;
+}
+a{
+    font-size: small;
+}
+p{
+    padding: 10px;
+    font-size: small;
+}
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    border: 2px solid #51ddfc;
+
+}
+
+.Buy {
+    border-radius: 20px;
+    justify-content: center;
+    background-color:#e87c00 ;
+    transition: 0.2s;
+}
+.Buy:hover{
+    background-color: #ff9318;
+    box-shadow:2px 2px black;
+    transform: scale(1.02);
+
+}
